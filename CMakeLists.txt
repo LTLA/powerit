@@ -8,9 +8,6 @@ project(powerit
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
-# Dependencies
-add_subdirectory(extern)
-
 # Library
 add_library(powerit INTERFACE)
 add_library(ltla::powerit ALIAS powerit)
@@ -19,6 +16,9 @@ target_include_directories(powerit INTERFACE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/ltla>)
 target_compile_features(powerit INTERFACE cxx_std_17)
+
+# Dependencies
+add_subdirectory(extern)
 target_link_libraries(powerit INTERFACE ltla::aarand)
 
 # Tests
