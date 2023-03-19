@@ -9,12 +9,7 @@ include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
 # Dependencies
-option(POWERIT_FETCH_EXTERN "" ON)
-if(POWERIT_FETCH_EXTERN)
-    add_subdirectory(extern)
-else()
-    find_package(ltla_aarand CONFIG REQUIRED)
-endif()
+add_subdirectory(extern)
 
 # Library
 add_library(powerit INTERFACE)
