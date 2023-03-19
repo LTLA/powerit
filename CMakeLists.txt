@@ -18,7 +18,14 @@ target_include_directories(powerit INTERFACE
 target_compile_features(powerit INTERFACE cxx_std_17)
 
 # Dependencies
-add_subdirectory(extern)
+option(POWERIT_FETCH_EXTERN "" ON)
+
+if(POWERIT_FETCH_EXTERN)
+    add_subdirectory(extern)
+else()
+    find_package(ltla_aarand CONFIG REQUIRED)
+endif()
+
 target_link_libraries(powerit INTERFACE ltla::aarand)
 
 # Tests
