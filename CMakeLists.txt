@@ -18,7 +18,7 @@ target_include_directories(powerit INTERFACE
 target_compile_features(powerit INTERFACE cxx_std_17)
 
 # Dependencies
-option(POWERIT_FETCH_EXTERN "Fetch powerit's external dependencies" ON)
+option(POWERIT_FETCH_EXTERN "Automatically fetch powerit's external dependencies." ON)
 
 if(POWERIT_FETCH_EXTERN)
     add_subdirectory(extern)
