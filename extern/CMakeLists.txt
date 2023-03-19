@@ -1,9 +1,8 @@
 include(FetchContent)
-
 FetchContent_Declare(
   aarand
   GIT_REPOSITORY https://github.com/LTLA/aarand
-  GIT_TAG f61f6b08453cfa8d2681f32b795626f8cd21c724
+  GIT_TAG 84d48b65d49ce8b844398f11aff3015b86e17197
 )
 
 FetchContent_MakeAvailable(aarand)
