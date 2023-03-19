@@ -74,8 +74,8 @@ cmake --build . --target install
 ```
 
 By default, this will use `FetchContent` to fetch all external dependencies.
-If you want to install them manually, use `-DPOWERIT_FETCH_EXTERN=OFF` -
-use the commit hashes in [`extern/CMakeLists.txt`](extern/CMakeLists.txt) to find compatible versions.
+If you want to install them manually, use `-DPOWERIT_FETCH_EXTERN=OFF`.
+See the commit hashes in [`extern/CMakeLists.txt`](extern/CMakeLists.txt) to find compatible versions of each dependency.
 
 ### Manual
 
