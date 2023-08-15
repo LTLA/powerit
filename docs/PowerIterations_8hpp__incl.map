@@ -1,0 +1,13 @@
+<map id="powerit/PowerIterations.hpp" name="powerit/PowerIterations.hpp">
+<area shape="rect" id="Node000001" title="Implements some power iterations." alt="" coords="133,5,315,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,80,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,34,88,76,86,71,192,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="104,79,171,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,34,165,72,161,67,207,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="195,79,253,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="227,31,227,64,221,64,221,31"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="277,79,334,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="239,30,282,67,279,71,236,34"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="358,79,485,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="258,29,375,71,373,76,256,34"/>
+</map>

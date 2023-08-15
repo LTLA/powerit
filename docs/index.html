@@ -79,7 +79,7 @@ $(function() {
 <p>Not much to say here, this repository just contains a header-only C++ library to perform power iterations. It's a quick-and-dirty method of getting the first eigenvector from a diagonalizable matrix - most typically from a covariance matrix, to get the first principal component. Well, maybe it's not so quick, but it doesn't add any dependencies and it'll get the job done. And sometimes that's enough.</p>
 <h1>Quick start</h1>
 <p>This is a header-only library, so usage is pretty simple:</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;powerit/PowerIterations.hpp&quot;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="PowerIterations_8hpp.html">powerit/PowerIterations.hpp</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;random&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Fill up the input matrix.</span></div>
@@ -91,8 +91,9 @@ $(function() {
 <div class="line">std::vector&lt;double&gt; eigenvector(ndim);</div>
 <div class="line">std::mt19937_64 rng(10);</div>
 <div class="line">runner.<a class="code hl_function" href="classpowerit_1_1PowerIterations.html#a71cfa1900643168d1898d54483f3f231">run</a>(order, matrix.data(), eigenvector.data(), rng);</div>
-<div class="ttc" id="aclasspowerit_1_1PowerIterations_html"><div class="ttname"><a href="classpowerit_1_1PowerIterations.html">powerit::PowerIterations</a></div><div class="ttdoc">Perform power iterations to find the first eigenvalue/vector.</div><div class="ttdef"><b>Definition</b> PowerIterations.hpp:25</div></div>
-<div class="ttc" id="aclasspowerit_1_1PowerIterations_html_a71cfa1900643168d1898d54483f3f231"><div class="ttname"><a href="classpowerit_1_1PowerIterations.html#a71cfa1900643168d1898d54483f3f231">powerit::PowerIterations::run</a></div><div class="ttdeci">std::pair&lt; Data, int &gt; run(size_t order, const Data *x, Data *output, Engine &amp;eng)</div><div class="ttdef"><b>Definition</b> PowerIterations.hpp:101</div></div>
+<div class="ttc" id="aPowerIterations_8hpp_html"><div class="ttname"><a href="PowerIterations_8hpp.html">PowerIterations.hpp</a></div><div class="ttdoc">Implements some power iterations.</div></div>
+<div class="ttc" id="aclasspowerit_1_1PowerIterations_html"><div class="ttname"><a href="classpowerit_1_1PowerIterations.html">powerit::PowerIterations</a></div><div class="ttdoc">Perform power iterations to find the first eigenvalue/vector.</div><div class="ttdef"><b>Definition</b> PowerIterations.hpp:29</div></div>
+<div class="ttc" id="aclasspowerit_1_1PowerIterations_html_a71cfa1900643168d1898d54483f3f231"><div class="ttname"><a href="classpowerit_1_1PowerIterations.html#a71cfa1900643168d1898d54483f3f231">powerit::PowerIterations::run</a></div><div class="ttdeci">std::pair&lt; Data, int &gt; run(size_t order, const Data *x, Data *output, Engine &amp;eng)</div><div class="ttdef"><b>Definition</b> PowerIterations.hpp:105</div></div>
 </div><!-- fragment --><h1>Building projects</h1>
 <h2>CMake with <code>FetchContent</code></h2>
 <p>If you're using CMake, you just need to add something like this to your <code>CMakeLists.txt</code>:</p>
