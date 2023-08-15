@@ -8,11 +8,15 @@
 #include "aarand/aarand.hpp"
 
 /**
- * @file powerit.hpp
+ * @file PowerIterations.hpp
  *
  * @brief Implements some power iterations.
  */
 
+/**
+ * @namespace powerit
+ * @brief Namespace for power iteration functions.
+ */
 namespace powerit {
 
 /**
