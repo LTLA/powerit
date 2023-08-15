@@ -60,12 +60,7 @@ target_link_libraries(mylib INTERFACE ltla::powerit)
 
 ### CMake with `find_package()`
 
-```cmake
-find_package(ltla_powerit CONFIG REQUIRED)
-target_link_libraries(mylib INTERFACE ltla::powerit)
-```
-
-To install the library, use:
+To install the library, clone the desired version of this repository and run:
 
 ```sh
 mkdir build && cd build
@@ -73,9 +68,15 @@ cmake .. -DPOWERIT_TESTS=OFF
 cmake --build . --target install
 ```
 
-By default, this will use `FetchContent` to fetch all external dependencies.
+Then, we can use `find_package()` as usual:
+
+```cmake
+find_package(ltla_powerit CONFIG REQUIRED)
+target_link_libraries(mylib INTERFACE ltla::powerit)
+```
+
+By default, this will use `FetchContent` to fetch all external dependencies (listed in [`extern/CMakeLists.txt`](extern/CMakeLists.txt)).
 If you want to install them manually, use `-DPOWERIT_FETCH_EXTERN=OFF`.
-See the commit hashes in [`extern/CMakeLists.txt`](extern/CMakeLists.txt) to find compatible versions of each dependency.
 
 ### Manual
 

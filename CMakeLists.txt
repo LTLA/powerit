@@ -5,16 +5,14 @@ project(powerit
     DESCRIPTION "C++ implementation of power iterations"
     LANGUAGES CXX)
 
-include(GNUInstallDirs)
-include(CMakePackageConfigHelpers)
-
-# Library
 add_library(powerit INTERFACE)
 add_library(ltla::powerit ALIAS powerit)
 
+include(GNUInstallDirs)
 target_include_directories(powerit INTERFACE
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/ltla>)
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/ltla_powerit>)
+
 target_compile_features(powerit INTERFACE cxx_std_17)
 
 # Dependencies
@@ -43,7 +41,7 @@ endif()
 
 # Install
 install(DIRECTORY include/
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ltla)
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/ltla_powerit)
 
 install(TARGETS powerit
     EXPORT poweritTargets)
@@ -53,6 +51,7 @@ install(EXPORT poweritTargets
     NAMESPACE ltla::
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/ltla_powerit)
 
+include(CMakePackageConfigHelpers)
 configure_package_config_file(${CMAKE_CURRENT_SOURCE_DIR}/cmake/Config.cmake.in
     "${CMAKE_CURRENT_BINARY_DIR}/ltla_poweritConfig.cmake"
     INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/ltla_powerit)
