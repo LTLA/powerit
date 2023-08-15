@@ -25,6 +25,8 @@ target_link_libraries(
     powerit
 )
 
+target_compile_options(libtest PRIVATE -Wall -Wpedantic -Werror -Wextra)
+
 set(CODE_COVERAGE OFF CACHE BOOL "Enable coverage testing for tests")
 if(CODE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     target_compile_options(libtest PRIVATE -O0 -g --coverage)

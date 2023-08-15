@@ -101,10 +101,10 @@ public:
     std::pair<Data, int> run(size_t order, const Data* x, Data* output, Engine& eng) {
         // Defining a random starting vector.
         while (1) {
-            for (int d = 0; d < order - 1; d += 2) {
+            for (size_t d = 1; d < order; d += 2) {
                 auto sampled = aarand::standard_normal<Data>(eng);
-                output[d] = sampled.first;
-                output[d + 1] = sampled.second;
+                output[d - 1] = sampled.first;
+                output[d] = sampled.second;
             }
             if (order % 2) {
                 output[order - 1] = aarand::standard_normal<Data>(eng).first;
