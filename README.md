@@ -16,19 +16,25 @@ And sometimes that's enough.
 This is a header-only library, so usage is pretty simple:
 
 ```cpp
-#include "powerit/PowerIterations.hpp"
+#include "powerit/powerit.hpp"
 #include <random>
 
-// Fill up the input matrix.
+// Fill up the input matrix (row-major).
 size_t ndim = 10;
 std::vector<double> matrix(ndim * ndim);
 
 // Compute the power iterations.
-powerit::PowerIterations runner;
 std::vector<double> eigenvector(ndim);
+powerit::Options opt;
 std::mt19937_64 rng(10);
-runner.run(order, matrix.data(), eigenvector.data(), rng);
+auto info = powerit::compute(order, matrix.data(), eigenvector.data(), rng, opt);
+
+info.value; // estimate of the first eigenvalue
+info.iterations; // number of iterations required for convergence.
 ```
+
+Users can tune the number of iterations, tolerance, and number of threads via the `Options` argument.
+Check out the [API reference](https://ltla.github.io/powerit) for more information.
 
 ## Building projects 
 
