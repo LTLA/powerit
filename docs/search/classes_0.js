@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['defaults_0',['Defaults',['../structpowerit_1_1PowerIterations_1_1Defaults.html',1,'powerit::PowerIterations']]]
+  ['options_0',['Options',['../structpowerit_1_1Options.html',1,'powerit']]]
 ];

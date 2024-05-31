@@ -1,33 +1,30 @@
 var indexSectionsWithContent =
 {
-  0: "diprst",
-  1: "dp",
+  0: "cinopt",
+  1: "o",
   2: "p",
-  3: "p",
-  4: "rs",
-  5: "it",
-  6: "p"
+  3: "c",
+  4: "int",
+  5: "cip"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "namespaces",
-  3: "files",
-  4: "functions",
-  5: "variables",
-  6: "pages"
+  2: "files",
+  3: "functions",
+  4: "variables",
+  5: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Classes",
-  2: "Namespaces",
-  3: "Files",
-  4: "Functions",
-  5: "Variables",
-  6: "Pages"
+  2: "Files",
+  3: "Functions",
+  4: "Variables",
+  5: "Pages"
 };
 
