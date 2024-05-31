@@ -169,7 +169,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; opt.<a class="code hl_variable" href="structpowerit_1_1Options.html#a840c57cd50dc00391798227b1e1b76d5">iterations</a>; ++i) {</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="preprocessor">#ifndef POWERIT_CUSTOM_PARALLEL</span></div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="preprocessor">#ifdef _OPENMP</span></div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">        #pragma omp parallel for nthreads(opt.num_threads)</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">        #pragma omp parallel for num_threads(opt.num_threads)</span></div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; order; ++j) {</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="preprocessor">#else</span></div>
