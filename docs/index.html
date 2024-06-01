@@ -103,9 +103,16 @@ $(function(){ initResizable(false); });
 <div class="line"> </div>
 <div class="line"><span class="comment">// Compute the power iterations.</span></div>
 <div class="line">std::vector&lt;double&gt; eigenvector(ndim);</div>
-<div class="line"><a class="code hl_struct" href="structpowerit_1_1Options.html">powerit::Options</a> opt;</div>
 <div class="line">std::mt19937_64 rng(10);</div>
-<div class="line"><span class="keyword">auto</span> info = <a class="code hl_function" href="namespacepowerit.html#a807c3e8dc3a452ccfddfb19f481b9389">powerit::compute</a>(order, matrix.data(), eigenvector.data(), rng, opt);</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> info = <a class="code hl_function" href="namespacepowerit.html#a807c3e8dc3a452ccfddfb19f481b9389">powerit::compute</a>(</div>
+<div class="line">    order, </div>
+<div class="line">    matrix.data(), </div>
+<div class="line">    <span class="comment">/* row_major = */</span> <span class="keyword">true</span>, </div>
+<div class="line">    eigenvector.data(), </div>
+<div class="line">    rng, </div>
+<div class="line">    <a class="code hl_struct" href="structpowerit_1_1Options.html">powerit::Options</a>()</div>
+<div class="line">);</div>
 <div class="line"> </div>
 <div class="line">info.value; <span class="comment">// estimate of the first eigenvalue</span></div>
 <div class="line">info.iterations; <span class="comment">// number of iterations required for convergence.</span></div>
