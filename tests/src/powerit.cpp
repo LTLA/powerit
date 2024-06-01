@@ -50,7 +50,7 @@ TEST(PowerIterations, Basic) {
 
     // Running power iterations.
     std::vector<double> output(order);
-    auto res = powerit::compute(order, x.data(), output.data(), eng, powerit::Options());
+    auto res = powerit::compute(order, x.data(), true, output.data(), eng, powerit::Options());
 
     // Verifying that it converged.
     EXPECT_TRUE(res.value > 0);
@@ -66,6 +66,37 @@ TEST(PowerIterations, Basic) {
     EXPECT_TRUE(delta < 0.00000001);
 }
 
+TEST(PowerIterations, ColumnMajor) {
+    // Mocking up a symmetric matrix.
+    size_t order = 5;
+    std::mt19937_64 eng(123);
+    auto x = mock_square_matrix(order, eng);
+
+    // Running power iterations.
+    std::vector<double> init(order);
+    powerit::fill_starting_vector(order, init.data(), eng);
+
+    auto output = init;
+    auto res = powerit::compute(order, x.data(), true, output.data(), powerit::Options());
+
+    // Symmetric, so I should get the same results.
+    auto xoutput = init;
+    auto xres = powerit::compute(order, x.data(), false, xoutput.data(), powerit::Options());
+
+    EXPECT_EQ(xoutput, output);
+    EXPECT_EQ(xres.value, res.value);
+
+    // Unless we dope the matrix a little, then the results will be different.
+    x[1] = 100;
+    output = init;
+    res = powerit::compute(order, x.data(), true, output.data(), powerit::Options());
+    xoutput = init;
+    xres = powerit::compute(order, x.data(), false, xoutput.data(), powerit::Options());
+
+    EXPECT_NE(xoutput[0], output[0]);
+    EXPECT_NE(xres.value, res.value);
+}
+
 TEST(PowerIterations, Unconverged) {
     // Mocking up a symmetric matrix.
     size_t order = 5;
@@ -77,7 +108,7 @@ TEST(PowerIterations, Unconverged) {
     opt.tolerance = 0;
     opt.iterations = 100;
     std::vector<double> output(order);
-    auto res = powerit::compute(order, x.data(), output.data(), eng, opt);
+    auto res = powerit::compute(order, x.data(), true, output.data(), eng, opt);
 
     // Checking that it failed to converge.
     EXPECT_EQ(res.iterations, -1);
@@ -105,14 +136,22 @@ TEST(PowerIterations, Parallel) {
 
     powerit::Options opt;
     std::vector<double> ref(init);
-    auto res = powerit::compute(order, x.data(), ref.data(), opt);
+    auto res = powerit::compute(order, x.data(), true, ref.data(), opt);
 
     // Adding more threads.
     opt.num_threads = 3;
     std::vector<double> par(init);
-    auto pres = powerit::compute(order, x.data(), par.data(), opt);
+    auto pres = powerit::compute(order, x.data(), true, par.data(), opt);
 
     EXPECT_EQ(par, ref);
     EXPECT_EQ(res.value, pres.value);
     EXPECT_EQ(res.iterations, pres.iterations);
+
+    // Trying parallelization in column major.
+    std::vector<double> colpar(init);
+    auto cpres = powerit::compute(order, x.data(), false, colpar.data(), opt);
+
+    EXPECT_EQ(colpar, ref);
+    EXPECT_EQ(res.value, cpres.value);
+    EXPECT_EQ(res.iterations, cpres.iterations);
 }

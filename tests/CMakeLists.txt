@@ -39,9 +39,11 @@ macro(create_test name)
 endmacro()
 
 create_test(libtest)
+
 find_package(OpenMP)
 if(OpenMP_FOUND)
-    target_link_libraries(libtest OpenMP::OpenMP_CXX)
+    create_test(omptest)
+    target_link_libraries(omptest OpenMP::OpenMP_CXX)
 endif()
 
 create_test(partest)

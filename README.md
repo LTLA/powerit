@@ -25,9 +25,16 @@ std::vector<double> matrix(ndim * ndim);
 
 // Compute the power iterations.
 std::vector<double> eigenvector(ndim);
-powerit::Options opt;
 std::mt19937_64 rng(10);
-auto info = powerit::compute(order, matrix.data(), eigenvector.data(), rng, opt);
+
+auto info = powerit::compute(
+    order, 
+    matrix.data(), 
+    /* row_major = */ true, 
+    eigenvector.data(), 
+    rng, 
+    powerit::Options()
+);
 
 info.value; // estimate of the first eigenvalue
 info.iterations; // number of iterations required for convergence.
