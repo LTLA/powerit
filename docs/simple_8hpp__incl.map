@@ -1,0 +1,15 @@
+<map id="powerit/simple.hpp" name="powerit/simple.hpp">
+<area shape="rect" id="Node000001" title="Power iterations for a simple array." alt="" coords="141,5,271,31"/>
+<area shape="rect" id="Node000002" href="$core_8hpp.html" title="Core data structures and calculations." alt="" coords="124,79,195,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,33,178,67,173,64,196,30"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="219,79,286,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="216,30,239,64,234,67,211,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,63,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="139,108,70,147,67,142,137,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="87,153,144,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="154,106,133,141,129,138,150,103"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="168,153,242,178"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="169,103,191,138,187,141,165,106"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="266,153,394,178"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="189,103,288,144,286,149,187,108"/>
+</map>

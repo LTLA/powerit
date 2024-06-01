@@ -105,12 +105,13 @@ $(function(){ initResizable(false); });
 <div class="line">std::vector&lt;double&gt; eigenvector(ndim);</div>
 <div class="line"><a class="code hl_struct" href="structpowerit_1_1Options.html">powerit::Options</a> opt;</div>
 <div class="line">std::mt19937_64 rng(10);</div>
-<div class="line"><span class="keyword">auto</span> info = powerit::compute(order, matrix.data(), eigenvector.data(), rng, opt);</div>
+<div class="line"><span class="keyword">auto</span> info = <a class="code hl_function" href="namespacepowerit.html#a807c3e8dc3a452ccfddfb19f481b9389">powerit::compute</a>(order, matrix.data(), eigenvector.data(), rng, opt);</div>
 <div class="line"> </div>
 <div class="line">info.value; <span class="comment">// estimate of the first eigenvalue</span></div>
 <div class="line">info.iterations; <span class="comment">// number of iterations required for convergence.</span></div>
-<div class="ttc" id="apowerit_8hpp_html"><div class="ttname"><a href="powerit_8hpp.html">powerit.hpp</a></div><div class="ttdoc">Implements some power iterations.</div></div>
-<div class="ttc" id="astructpowerit_1_1Options_html"><div class="ttname"><a href="structpowerit_1_1Options.html">powerit::Options</a></div><div class="ttdoc">Options for compute().</div><div class="ttdef"><b>Definition</b> powerit.hpp:21</div></div>
+<div class="ttc" id="anamespacepowerit_html_a807c3e8dc3a452ccfddfb19f481b9389"><div class="ttname"><a href="namespacepowerit.html#a807c3e8dc3a452ccfddfb19f481b9389">powerit::compute</a></div><div class="ttdeci">Result&lt; Data_ &gt; compute(size_t order, const Data_ *matrix, bool row_major, Data_ *vector, Engine_ &amp;engine, const Options &amp;opt)</div><div class="ttdef"><b>Definition</b> simple.hpp:33</div></div>
+<div class="ttc" id="apowerit_8hpp_html"><div class="ttname"><a href="powerit_8hpp.html">powerit.hpp</a></div><div class="ttdoc">Umbrella header for power iterations.</div></div>
+<div class="ttc" id="astructpowerit_1_1Options_html"><div class="ttname"><a href="structpowerit_1_1Options.html">powerit::Options</a></div><div class="ttdoc">Options for compute().</div><div class="ttdef"><b>Definition</b> core.hpp:20</div></div>
 </div><!-- fragment --><p>Users can tune the number of iterations, tolerance, and number of threads via the <code>Options</code> argument. Check out the <a href="https://ltla.github.io/powerit">API reference</a> for more information.</p>
 <h1>Building projects</h1>
 <h2>CMake with <code>FetchContent</code></h2>

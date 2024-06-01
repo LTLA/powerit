@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['tolerance_0',['tolerance',['../structpowerit_1_1Options.html#a38186e948820f0613efd56c0aaea9682',1,'powerit::Options']]]
+  ['power_20iterations_20in_20c_0',['Power iterations in C++',['../index.html',1,'']]],
+  ['powerit_1',['powerit',['../namespacepowerit.html',1,'']]],
+  ['powerit_2ehpp_2',['powerit.hpp',['../powerit_8hpp.html',1,'']]]
 ];

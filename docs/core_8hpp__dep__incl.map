@@ -1,0 +1,8 @@
+<map id="powerit/core.hpp" name="powerit/core.hpp">
+<area shape="rect" id="Node000001" title="Core data structures and calculations." alt="" coords="14,5,130,31"/>
+<area shape="rect" id="Node000002" href="$powerit_8hpp.html" title="Umbrella header for power iterations." alt="" coords="5,153,139,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,46,50,74,49,104,57,130,68,151,63,153,52,132,44,105,45,73,55,44"/>
+<area shape="rect" id="Node000003" href="$simple_8hpp.html" title="Power iterations for a simple array." alt="" coords="59,79,189,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="92,42,117,77,113,80,87,45"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="109,119,83,154,79,151,104,116"/>
+</map>
