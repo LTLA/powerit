@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 3.14...3.25)
+cmake_minimum_required(VERSION 3.25)
 
 project(powerit
-    VERSION 1.0.0
+    VERSION 2.0.0
     DESCRIPTION "C++ implementation of power iterations"
     LANGUAGES CXX)
 
@@ -20,7 +20,7 @@ option(POWERIT_FETCH_EXTERN "Automatically fetch powerit's external dependencies
 if(POWERIT_FETCH_EXTERN)
     add_subdirectory(extern)
 else()
-    find_package(ltla_aarand CONFIG REQUIRED)
+    find_package(ltla_aarand 1.0.0 CONFIG REQUIRED)
 endif()
 
 target_link_libraries(powerit INTERFACE ltla::aarand)
@@ -55,5 +55,10 @@ configure_package_config_file(${CMAKE_CURRENT_SOURCE_DIR}/cmake/Config.cmake.in
     "${CMAKE_CURRENT_BINARY_DIR}/ltla_poweritConfig.cmake"
     INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/ltla_powerit)
 
+write_basic_package_version_file(
+    ${CMAKE_CURRENT_BINARY_DIR}/ltla_poweritConfigVersion.cmake
+    COMPATIBILITY SameMajorVersion)
+
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/ltla_poweritConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/ltla_poweritConfigVersion.cmake"
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/ltla_powerit)
