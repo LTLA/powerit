@@ -97,7 +97,6 @@ Result<Data_> compute(size_t order, const Data_* matrix, bool row_major, Data_* 
 
 #ifndef POWERIT_CUSTOM_PARALLEL
             size_t worker_size = (order / opt.num_threads) + (order % opt.num_threads > 0); // Ceiling of an integer division.
-            size_t start = 0;
 
             #pragma omp parallel for num_threads(opt.num_threads)
             for (int x = 0; x < opt.num_threads; ++x) {
