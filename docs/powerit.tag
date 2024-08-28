@@ -7,6 +7,13 @@
     <class kind="struct">powerit::Options</class>
     <class kind="struct">powerit::Result</class>
     <namespace>powerit</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>POWERIT_CUSTOM_PARALLEL</name>
+      <anchorfile>core_8hpp.html</anchorfile>
+      <anchor>adc6e7783ef48d5051b2b9f86314a9853</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>powerit.hpp</name>
@@ -105,6 +112,6 @@
     <name>index</name>
     <title>Power iterations in C++</title>
     <filename>index.html</filename>
-    <docanchor file="index.html" title="Power iterations in C++">md__2github_2workspace_2README</docanchor>
+    <docanchor file="index.html">md__2github_2workspace_2README</docanchor>
   </compound>
 </tagfile>
