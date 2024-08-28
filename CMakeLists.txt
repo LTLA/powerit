@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.25)
 
 project(powerit
-    VERSION 2.0.0
+    VERSION 2.0.1
     DESCRIPTION "C++ implementation of power iterations"
     LANGUAGES CXX)
 
@@ -21,9 +21,10 @@ if(POWERIT_FETCH_EXTERN)
     add_subdirectory(extern)
 else()
     find_package(ltla_aarand 1.0.0 CONFIG REQUIRED)
+    find_package(ltla_subpar 0.2.1 CONFIG REQUIRED)
 endif()
 
-target_link_libraries(powerit INTERFACE ltla::aarand)
+target_link_libraries(powerit INTERFACE ltla::aarand ltla::subpar)
 
 # Tests
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)

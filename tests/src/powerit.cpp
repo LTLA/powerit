@@ -1,29 +1,5 @@
 #include <gtest/gtest.h>
 
-#ifdef TEST_CUSTOM_PARALLEL
-#include <thread>
-template<class Function_>
-void parallelize(size_t order, int nthreads, Function_ fun) {
-    size_t per_job = (order / nthreads) + (order % nthreads > 0);
-
-    std::vector<std::thread> jobs;
-    jobs.reserve(nthreads);
-
-    size_t start = 0;
-    for (size_t o = 0; o < order; ++o) {
-        size_t length = std::min(order - start, per_job);
-        jobs.emplace_back(fun, start, length);
-        start += length;
-    }
-
-    for (auto& j : jobs) {
-        j.join();
-    }
-}
-
-#define POWERIT_CUSTOM_PARALLEL parallelize
-#endif
-
 #include "powerit/powerit.hpp"
 #include "aarand/aarand.hpp"
 #include <random>
