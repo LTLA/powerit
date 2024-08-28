@@ -125,14 +125,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Number of threads to use for the matrix multiplication.</p>
-<p>By default, <code><a class="el" href="namespacepowerit.html#a807c3e8dc3a452ccfddfb19f481b9389">compute()</a></code> uses OpenMP for parallelization. Applications can override this by setting the <code>POWERIT_CUSTOM_PARALLEL</code> function-like macro, e.g., in environments where OpenMP is not available. This macro should accept three arguments:</p><ul>
-<li><code>order</code>, a <code>size_t</code> specifying the number of dimensions in the input matrix.</li>
-<li><code>num_threads</code>, an <code>int</code> specifying the number of threads to use.</li>
-<li><code>fun</code>, a function that accepts two <code>size_t</code> values.</li>
-</ul>
-<p>The macro should partition the matrix dimension elements into blocks, assign each block to a thread and call <code>fun()</code> in each thread with the start position and length of its block.</p>
-<p>For <code><a class="el" href="namespacepowerit.html#ae142930faf055737e8a45cba10f7efef">compute_core()</a></code>, the parallelization scheme depends on the provided <code>multiply()</code>. </p>
+<p>Number of threads to use for the matrix multiplication in <code><a class="el" href="namespacepowerit.html#a807c3e8dc3a452ccfddfb19f481b9389">compute()</a></code>. The parallelization scheme depends on the definition of the <code>POWERIT_CUSTOM_PARALLEL</code> function-like macro. If undefined by the user, this macro defaults to <code>subpar::parallelize()</code> and should accept the same arguments.</p>
+<p>For <code><a class="el" href="namespacepowerit.html#ae142930faf055737e8a45cba10f7efef">compute_core()</a></code>, the parallelization scheme depends on the provided <code>multiply()</code>, and this option has no effect. </p>
 
 </div>
 </div>
