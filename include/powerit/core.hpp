@@ -14,6 +14,12 @@
 
 #ifndef POWERIT_CUSTOM_PARALLEL
 #include "subpar/subpar.hpp"
+
+/**
+ * Function-like macro implementing the parallelization scheme for **powerit**.
+ * If undefined by the user, it defaults to `subpar::parallelize()`.
+ * Any user-defined macro should accept the same arguments as `subpar::parallelize()`.
+ */ 
 #define POWERIT_CUSTOM_PARALLEL ::subpar::parallelize
 #endif
 
@@ -38,8 +44,7 @@ struct Options {
 
     /**
      * Number of threads to use for the matrix multiplication in `compute()`.
-     * The parallelization scheme depends on the definition of the `POWERIT_CUSTOM_PARALLEL` function-like macro.
-     * If undefined by the user, this macro defaults to `subpar::parallelize()` and should accept the same arguments.
+     * The parallelization scheme depends on the definition of the #POWERIT_CUSTOM_PARALLEL function-like macro.
      *
      * For `compute_core()`, the parallelization scheme depends on the provided `multiply()`, and this option has no effect.
      */
