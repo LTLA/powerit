@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "cfinoprstv",
   1: "or",
   2: "ps",
-  3: "cps",
+  3: "cprs",
   4: "cfp",
   5: "intv",
   6: "p",

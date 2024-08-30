@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['parallelize_0',['parallelize',['https://ltla.github.io/subpar/namespacesubpar.html#a63f23d31089b98cd332e8a7508e35c15',1,'subpar']]],
-  ['power_20iterations_20in_20c_1',['Power iterations in C++',['../index.html',1,'']]],
-  ['powerit_2',['powerit',['../namespacepowerit.html',1,'']]],
-  ['powerit_2ehpp_3',['powerit.hpp',['../powerit_8hpp.html',1,'']]],
-  ['powerit_5fcustom_5fparallel_4',['POWERIT_CUSTOM_PARALLEL',['../core_8hpp.html#adc6e7783ef48d5051b2b9f86314a9853',1,'core.hpp']]]
+  ['parallelize_5frange_0',['parallelize_range',['https://ltla.github.io/subpar/namespacesubpar.html#a9c64cc17f4f8d1fadbba6d25053a8dbe',1,'subpar']]],
+  ['parallelize_5fsimple_1',['parallelize_simple',['https://ltla.github.io/subpar/namespacesubpar.html#abd9eeb2cbaaf14382b926674c47b9d73',1,'subpar']]],
+  ['power_20iterations_20in_20c_2',['Power iterations in C++',['../index.html',1,'']]],
+  ['powerit_3',['powerit',['../namespacepowerit.html',1,'']]],
+  ['powerit_2ehpp_4',['powerit.hpp',['../powerit_8hpp.html',1,'']]],
+  ['powerit_5fcustom_5fparallel_5',['POWERIT_CUSTOM_PARALLEL',['../simple_8hpp.html#a8a2df0fc4e2159422d3c57300463400c',1,'simple.hpp']]]
 ];

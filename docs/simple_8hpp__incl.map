@@ -1,17 +1,18 @@
 <map id="powerit/simple.hpp" name="powerit/simple.hpp">
-<area shape="rect" id="Node000001" title="Power iterations for a simple array." alt="" coords="187,5,316,31"/>
-<area shape="rect" id="Node000002" href="$core_8hpp.html" title="Core data structures and calculations." alt="" coords="170,79,240,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,33,223,67,219,64,241,30"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="264,79,332,105"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="261,30,284,64,280,67,257,33"/>
+<area shape="rect" id="Node000001" title="Power iterations for a simple array." alt="" coords="248,5,377,31"/>
+<area shape="rect" id="Node000002" href="$core_8hpp.html" title="Core data structures and calculations." alt="" coords="124,79,195,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="288,34,200,75,198,70,286,29"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="219,79,286,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="305,33,275,69,270,65,301,30"/>
+<area shape="rect" id="Node000008" href="/github/workspace/docs/subpar.tag$subpar_8hpp.html" title=" " alt="" coords="310,79,438,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="318,30,348,66,344,69,314,33"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,153,63,178"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="177,108,78,149,76,144,175,103"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="139,108,70,147,67,142,137,103"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="87,153,144,178"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="191,107,144,145,141,141,188,103"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="154,106,133,141,129,138,150,103"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="168,153,242,178"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="207,105,207,137,202,137,202,105"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="169,103,191,138,187,141,165,106"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="266,153,394,178"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="227,103,297,142,294,147,225,108"/>
-<area shape="rect" id="Node000007" href="/github/workspace/docs/subpar.tag$subpar_8hpp.html" title=" " alt="" coords="418,153,546,178"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="241,100,421,146,420,151,240,105"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="189,103,288,144,286,149,187,108"/>
+<area shape="poly" id="edge8_Node000008_Node000001" title=" " alt="" coords="369,80,339,44,343,41,373,77"/>
 </map>
