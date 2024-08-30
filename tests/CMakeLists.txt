@@ -14,24 +14,42 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
+include(GoogleTest)
+
+option(CODE_COVERAGE "Enable coverage testing for tests" OFF)
+set(DO_CODE_COVERAGE OFF)
+if(CODE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    set(DO_CODE_COVERAGE ON)
+endif()
+
+
+macro(decorate_test target)
+    target_link_libraries(
+        ${target}
+        gtest_main
+        powerit
+    )
+
+    target_compile_options(${target} PRIVATE -Wall -Wpedantic -Werror -Wextra)
+
+    if(DO_CODE_COVERAGE)
+        target_compile_options(${target} PRIVATE -O0 -g --coverage)
+        target_link_options(${target} PRIVATE --coverage)
+    endif()
+
+    gtest_discover_tests(${target})
+endmacro()
+
 add_executable(
     libtest
     src/powerit.cpp
 )
+decorate_test(libtest)
 
-target_link_libraries(
-    libtest
-    gtest_main
-    powerit
+add_executable(
+    cuspartest
+    src/powerit.cpp
 )
+decorate_test(cuspartest)
+target_compile_definitions(cuspartest PRIVATE TEST_CUSTOM_PARALLEL=1)
 
-target_compile_options(libtest PRIVATE -Wall -Wpedantic -Werror -Wextra)
-
-set(CODE_COVERAGE OFF CACHE BOOL "Enable coverage testing for tests")
-if(CODE_COVERAGE AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
-    target_compile_options(libtest PRIVATE -O0 -g --coverage)
-    target_link_options(libtest PRIVATE --coverage)
-endif()
-
-include(GoogleTest)
-gtest_discover_tests(libtest)

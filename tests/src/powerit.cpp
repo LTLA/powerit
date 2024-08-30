@@ -1,5 +1,10 @@
 #include <gtest/gtest.h>
 
+#ifdef TEST_CUSTOM_PARALLEL
+#include "subpar/subpar.hpp"
+#define POWERIT_CUSTOM_PARALLEL(nw, nt, fun) subpar::parallelize(nw, nt, std::move(fun));
+#endif
+
 #include "powerit/powerit.hpp"
 #include "aarand/aarand.hpp"
 #include <random>

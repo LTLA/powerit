@@ -12,17 +12,6 @@
  * @brief Core data structures and calculations.
  */
 
-#ifndef POWERIT_CUSTOM_PARALLEL
-#include "subpar/subpar.hpp"
-
-/**
- * Function-like macro implementing the parallelization scheme for **powerit**.
- * If undefined by the user, it defaults to `subpar::parallelize()`.
- * Any user-defined macro should accept the same arguments as `subpar::parallelize()`.
- */ 
-#define POWERIT_CUSTOM_PARALLEL ::subpar::parallelize
-#endif
-
 namespace powerit {
 
 /**
