@@ -78,7 +78,6 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">core.hpp File Reference</div></div>
 </div><!--header-->
@@ -90,28 +89,20 @@ $(function() {
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &quot;aarand/aarand.hpp&quot;</code><br />
-<code>#include &quot;<a class="elRef" href="https://ltla.github.io/subpar/subpar_8hpp.html">subpar/subpar.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for core.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="core_8hpp__incl.png" border="0" usemap="#apowerit_2core_8hpp" alt=""/></div>
 <map name="apowerit_2core_8hpp" id="apowerit_2core_8hpp">
-<area shape="rect" title="Core data structures and calculations." alt="" coords="209,5,326,31"/>
+<area shape="rect" title="Core data structures and calculations." alt="" coords="101,5,218,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,63,105"/>
-<area shape="poly" title=" " alt="" coords="229,34,78,80,77,75,227,29"/>
+<area shape="poly" title=" " alt="" coords="139,34,70,73,67,69,137,29"/>
 <area shape="rect" title=" " alt="" coords="87,79,144,105"/>
-<area shape="poly" title=" " alt="" coords="243,34,156,74,154,70,240,29"/>
+<area shape="poly" title=" " alt="" coords="154,33,133,67,129,64,150,30"/>
 <area shape="rect" title=" " alt="" coords="168,79,242,105"/>
-<area shape="poly" title=" " alt="" coords="259,33,227,69,223,65,255,29"/>
+<area shape="poly" title=" " alt="" coords="169,30,191,64,187,67,165,33"/>
 <area shape="rect" title=" " alt="" coords="266,79,394,105"/>
-<area shape="poly" title=" " alt="" coords="280,29,311,65,307,69,276,33"/>
-<area shape="rect" target="_parent" href="https://ltla.github.io/subpar/subpar_8hpp.html" title=" " alt="" coords="418,79,546,105"/>
-<area shape="poly" title=" " alt="" coords="305,29,432,71,430,76,303,34"/>
-<area shape="rect" href="simple_8hpp.html" title="Power iterations for a simple array." alt="" coords="491,153,574,178"/>
-<area shape="poly" title=" " alt="" coords="493,103,518,138,513,141,488,106"/>
-<area shape="poly" title=" " alt="" coords="540,151,559,116,562,97,556,81,543,70,523,60,467,44,403,34,340,27,341,22,404,28,469,39,524,55,546,65,560,77,568,97,564,118,545,154"/>
-<area shape="rect" title=" " alt="" coords="499,226,566,252"/>
-<area shape="poly" title=" " alt="" coords="535,179,535,211,530,211,530,179"/>
+<area shape="poly" title=" " alt="" coords="189,29,288,70,286,75,187,34"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -145,11 +136,6 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespacepowerit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for power iterations. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:adc6e7783ef48d5051b2b9f86314a9853" id="r_adc6e7783ef48d5051b2b9f86314a9853"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="core_8hpp.html#adc6e7783ef48d5051b2b9f86314a9853">POWERIT_CUSTOM_PARALLEL</a>&#160;&#160;&#160;::subpar::parallelize</td></tr>
-<tr class="separator:adc6e7783ef48d5051b2b9f86314a9853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae2dca12dec07f58cd18e35be2364ed3d" id="r_ae2dca12dec07f58cd18e35be2364ed3d"><td class="memTemplParams" colspan="2">template&lt;typename Data_ , class Engine_ &gt; </td></tr>
@@ -161,23 +147,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Core data structures and calculations. </p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="adc6e7783ef48d5051b2b9f86314a9853" name="adc6e7783ef48d5051b2b9f86314a9853"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc6e7783ef48d5051b2b9f86314a9853">&#9670;&#160;</a></span>POWERIT_CUSTOM_PARALLEL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define POWERIT_CUSTOM_PARALLEL&#160;&#160;&#160;::subpar::parallelize</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Function-like macro implementing the parallelization scheme for <b>powerit</b>. If undefined by the user, it defaults to <code>subpar::parallelize()</code>. Any user-defined macro should accept the same arguments as <code>subpar::parallelize()</code>. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

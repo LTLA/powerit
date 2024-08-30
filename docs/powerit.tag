@@ -7,13 +7,6 @@
     <class kind="struct">powerit::Options</class>
     <class kind="struct">powerit::Result</class>
     <namespace>powerit</namespace>
-    <member kind="define">
-      <type>#define</type>
-      <name>POWERIT_CUSTOM_PARALLEL</name>
-      <anchorfile>core_8hpp.html</anchorfile>
-      <anchor>adc6e7783ef48d5051b2b9f86314a9853</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>powerit.hpp</name>
@@ -92,6 +85,13 @@
       <anchorfile>namespacepowerit.html</anchorfile>
       <anchor>ae142930faf055737e8a45cba10f7efef</anchor>
       <arglist>(size_t order, Multiply_ multiply, Data_ *vector, const Options &amp;opt)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parallelize</name>
+      <anchorfile>namespacepowerit.html</anchorfile>
+      <anchor>a8aa471979ba5c0fefd44f22edd8013f7</anchor>
+      <arglist>(int num_workers, Task_ num_tasks, Run_ run_task_range)</arglist>
     </member>
     <member kind="function">
       <type>Result&lt; Data_ &gt;</type>

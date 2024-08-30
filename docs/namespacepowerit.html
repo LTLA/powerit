@@ -98,6 +98,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae142930faf055737e8a45cba10f7efef" id="r_ae142930faf055737e8a45cba10f7efef"><td class="memTemplParams" colspan="2">template&lt;class Multiply_ , typename Data_ &gt; </td></tr>
 <tr class="memitem:ae142930faf055737e8a45cba10f7efef"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structpowerit_1_1Result.html">Result</a>&lt; Data_ &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepowerit.html#ae142930faf055737e8a45cba10f7efef">compute_core</a> (size_t order, Multiply_ multiply, Data_ *vector, const <a class="el" href="structpowerit_1_1Options.html">Options</a> &amp;opt)</td></tr>
 <tr class="separator:ae142930faf055737e8a45cba10f7efef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aa471979ba5c0fefd44f22edd8013f7" id="r_a8aa471979ba5c0fefd44f22edd8013f7"><td class="memTemplParams" colspan="2">template&lt;typename Task_ , class Run_ &gt; </td></tr>
+<tr class="memitem:a8aa471979ba5c0fefd44f22edd8013f7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepowerit.html#a8aa471979ba5c0fefd44f22edd8013f7">parallelize</a> (int num_workers, Task_ num_tasks, Run_ run_task_range)</td></tr>
+<tr class="separator:a8aa471979ba5c0fefd44f22edd8013f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a807c3e8dc3a452ccfddfb19f481b9389" id="r_a807c3e8dc3a452ccfddfb19f481b9389"><td class="memTemplParams" colspan="2">template&lt;typename Data_ , class Engine_ &gt; </td></tr>
 <tr class="memitem:a807c3e8dc3a452ccfddfb19f481b9389"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="structpowerit_1_1Result.html">Result</a>&lt; Data_ &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacepowerit.html#a807c3e8dc3a452ccfddfb19f481b9389">compute</a> (size_t order, const Data_ *matrix, bool row_major, Data_ *vector, Engine_ &amp;engine, const <a class="el" href="structpowerit_1_1Options.html">Options</a> &amp;opt)</td></tr>
 <tr class="separator:a807c3e8dc3a452ccfddfb19f481b9389"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -357,6 +360,58 @@ template&lt;typename Data_ , class Engine_ &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a8aa471979ba5c0fefd44f22edd8013f7" name="a8aa471979ba5c0fefd44f22edd8013f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aa471979ba5c0fefd44f22edd8013f7">&#9670;&#160;</a></span>parallelize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename Task_ , class Run_ &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void powerit::parallelize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_workers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Task_&#160;</td>
+          <td class="paramname"><em>num_tasks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Run_&#160;</td>
+          <td class="paramname"><em>run_task_range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">Task_</td><td>Integer type for the number of tasks. </td></tr>
+    <tr><td class="paramname">Run_</td><td>Function to execute a range of tasks.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">num_workers</td><td>Number of workers. </td></tr>
+    <tr><td class="paramname">num_tasks</td><td>Number of tasks. </td></tr>
+    <tr><td class="paramname">run_task_range</td><td>Function to iterate over a range of tasks within a worker.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>By default, this is an alias to <code><a class="elRef" href="https://ltla.github.io/subpar/namespacesubpar.html#a9c64cc17f4f8d1fadbba6d25053a8dbe">subpar::parallelize_range()</a></code>. However, if the <code>POWERIT_CUSTOM_PARALLEL</code> function-like macro is defined, it is called instead. Any user-defined macro should accept the same arguments as <code><a class="elRef" href="https://ltla.github.io/subpar/namespacesubpar.html#a9c64cc17f4f8d1fadbba6d25053a8dbe">subpar::parallelize_range()</a></code>. </p>
 
 </div>
 </div>
