@@ -1,11 +1,18 @@
 <map id="powerit/core.hpp" name="powerit/core.hpp">
-<area shape="rect" id="Node000001" title="Core data structures and calculations." alt="" coords="101,5,218,31"/>
+<area shape="rect" id="Node000001" title="Core data structures and calculations." alt="" coords="209,5,326,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,79,63,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,34,70,73,67,69,137,29"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,34,78,80,77,75,227,29"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="87,79,144,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,33,133,67,129,64,150,30"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,34,156,74,154,70,240,29"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="168,79,242,105"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="169,30,191,64,187,67,165,33"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="259,33,227,69,223,65,255,29"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="266,79,394,105"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="189,29,288,70,286,75,187,34"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="280,29,311,65,307,69,276,33"/>
+<area shape="rect" id="Node000006" href="/github/workspace/docs/subpar.tag$subpar_8hpp.html" title=" " alt="" coords="418,79,546,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="305,29,432,71,430,76,303,34"/>
+<area shape="rect" id="Node000007" href="$simple_8hpp.html" title="Power iterations for a simple array." alt="" coords="491,153,574,178"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="493,103,518,138,513,141,488,106"/>
+<area shape="poly" id="edge7_Node000007_Node000001" title=" " alt="" coords="540,151,559,116,562,97,556,81,543,70,523,60,467,44,403,34,340,27,341,22,404,28,469,39,524,55,546,65,560,77,568,97,564,118,545,154"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="499,226,566,252"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="535,179,535,211,530,211,530,179"/>
 </map>

@@ -77,7 +77,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">simple.hpp File Reference</div></div>
 </div><!--header-->
@@ -87,28 +86,27 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="core_8hpp_source.html">core.hpp</a>&quot;</code><br />
 <code>#include &lt;numeric&gt;</code><br />
-<code>#include &quot;<a class="elRef" href="https://ltla.github.io/subpar/subpar_8hpp.html">subpar/subpar.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for simple.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="simple_8hpp__incl.png" border="0" usemap="#apowerit_2simple_8hpp" alt=""/></div>
 <map name="apowerit_2simple_8hpp" id="apowerit_2simple_8hpp">
-<area shape="rect" title="Power iterations for a simple array." alt="" coords="248,5,377,31"/>
-<area shape="rect" href="core_8hpp.html" title="Core data structures and calculations." alt="" coords="124,79,195,105"/>
-<area shape="poly" title=" " alt="" coords="288,34,200,75,198,70,286,29"/>
-<area shape="rect" title=" " alt="" coords="219,79,286,105"/>
-<area shape="poly" title=" " alt="" coords="305,33,275,69,270,65,301,30"/>
-<area shape="rect" target="_parent" href="https://ltla.github.io/subpar/subpar_8hpp.html" title=" " alt="" coords="310,79,438,105"/>
-<area shape="poly" title=" " alt="" coords="318,30,348,66,344,69,314,33"/>
+<area shape="rect" title="Power iterations for a simple array." alt="" coords="317,5,447,31"/>
+<area shape="rect" href="core_8hpp.html" title="Core data structures and calculations." alt="" coords="226,79,296,105"/>
+<area shape="poly" title=" " alt="" coords="363,34,296,73,293,68,360,29"/>
+<area shape="rect" title=" " alt="" coords="348,79,416,105"/>
+<area shape="poly" title=" " alt="" coords="385,31,385,63,379,63,379,31"/>
 <area shape="rect" title=" " alt="" coords="5,153,63,178"/>
-<area shape="poly" title=" " alt="" coords="139,108,70,147,67,142,137,103"/>
+<area shape="poly" title=" " alt="" coords="226,107,78,153,76,148,224,102"/>
 <area shape="rect" title=" " alt="" coords="87,153,144,178"/>
-<area shape="poly" title=" " alt="" coords="154,106,133,141,129,138,150,103"/>
+<area shape="poly" title=" " alt="" coords="237,108,155,148,153,143,235,103"/>
 <area shape="rect" title=" " alt="" coords="168,153,242,178"/>
-<area shape="poly" title=" " alt="" coords="169,103,191,138,187,141,165,106"/>
+<area shape="poly" title=" " alt="" coords="254,107,226,142,221,139,249,103"/>
 <area shape="rect" title=" " alt="" coords="266,153,394,178"/>
-<area shape="poly" title=" " alt="" coords="189,103,288,144,286,149,187,108"/>
-<area shape="poly" title=" " alt="" coords="369,80,339,44,343,41,373,77"/>
+<area shape="poly" title=" " alt="" coords="274,103,310,140,306,143,270,107"/>
+<area shape="rect" target="_parent" href="https://ltla.github.io/subpar/subpar_8hpp.html" title=" " alt="" coords="418,153,546,178"/>
+<area shape="poly" title=" " alt="" coords="297,102,431,145,429,150,295,107"/>
+<area shape="poly" title=" " alt="" coords="473,154,425,81,399,45,403,42,430,77,477,151"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -130,11 +128,6 @@ Namespaces</h2></td></tr>
 <tr class="memdesc:namespacepowerit"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace for power iterations. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a8a2df0fc4e2159422d3c57300463400c" id="r_a8a2df0fc4e2159422d3c57300463400c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="simple_8hpp.html#a8a2df0fc4e2159422d3c57300463400c">POWERIT_CUSTOM_PARALLEL</a>(nthreads,  ntasks,  fun)&#160;&#160;&#160;<a class="elRef" href="https://ltla.github.io/subpar/namespacesubpar.html#a9c64cc17f4f8d1fadbba6d25053a8dbe">::subpar::parallelize_range</a>&lt;true&gt;(nthreads, ntasks, fun)</td></tr>
-<tr class="separator:a8a2df0fc4e2159422d3c57300463400c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a807c3e8dc3a452ccfddfb19f481b9389" id="r_a807c3e8dc3a452ccfddfb19f481b9389"><td class="memTemplParams" colspan="2">template&lt;typename Data_ , class Engine_ &gt; </td></tr>
@@ -146,43 +139,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Power iterations for a simple array. </p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a8a2df0fc4e2159422d3c57300463400c" name="a8a2df0fc4e2159422d3c57300463400c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a2df0fc4e2159422d3c57300463400c">&#9670;&#160;</a></span>POWERIT_CUSTOM_PARALLEL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define POWERIT_CUSTOM_PARALLEL</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">nthreads, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">ntasks, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">fun&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="elRef" href="https://ltla.github.io/subpar/namespacesubpar.html#a9c64cc17f4f8d1fadbba6d25053a8dbe">::subpar::parallelize_range</a>&lt;true&gt;(nthreads, ntasks, fun)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Function-like macro implementing the parallelization scheme for <b>powerit</b>. If undefined by the user, it defaults to <code><a class="elRef" href="https://ltla.github.io/subpar/namespacesubpar.html#a9c64cc17f4f8d1fadbba6d25053a8dbe">subpar::parallelize_range()</a></code>. Any user-defined macro should accept the same arguments as <code><a class="elRef" href="https://ltla.github.io/subpar/namespacesubpar.html#a9c64cc17f4f8d1fadbba6d25053a8dbe">subpar::parallelize_range()</a></code>. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

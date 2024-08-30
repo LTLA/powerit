@@ -7,6 +7,13 @@
     <class kind="struct">powerit::Options</class>
     <class kind="struct">powerit::Result</class>
     <namespace>powerit</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>POWERIT_CUSTOM_PARALLEL</name>
+      <anchorfile>core_8hpp.html</anchorfile>
+      <anchor>adc6e7783ef48d5051b2b9f86314a9853</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>powerit.hpp</name>
@@ -22,13 +29,6 @@
     <filename>simple_8hpp.html</filename>
     <includes id="core_8hpp" name="core.hpp" local="yes" import="no" module="no" objc="no">core.hpp</includes>
     <namespace>powerit</namespace>
-    <member kind="define">
-      <type>#define</type>
-      <name>POWERIT_CUSTOM_PARALLEL</name>
-      <anchorfile>simple_8hpp.html</anchorfile>
-      <anchor>a8a2df0fc4e2159422d3c57300463400c</anchor>
-      <arglist>(nthreads, ntasks, fun)</arglist>
-    </member>
   </compound>
   <compound kind="struct">
     <name>powerit::Options</name>

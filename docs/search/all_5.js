@@ -5,5 +5,5 @@ var searchData=
   ['power_20iterations_20in_20c_2',['Power iterations in C++',['../index.html',1,'']]],
   ['powerit_3',['powerit',['../namespacepowerit.html',1,'']]],
   ['powerit_2ehpp_4',['powerit.hpp',['../powerit_8hpp.html',1,'']]],
-  ['powerit_5fcustom_5fparallel_5',['POWERIT_CUSTOM_PARALLEL',['../simple_8hpp.html#a8a2df0fc4e2159422d3c57300463400c',1,'simple.hpp']]]
+  ['powerit_5fcustom_5fparallel_5',['POWERIT_CUSTOM_PARALLEL',['../core_8hpp.html#adc6e7783ef48d5051b2b9f86314a9853',1,'core.hpp']]]
 ];
